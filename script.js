@@ -29,6 +29,12 @@ function makeGrid(rows, columns) {
                 square.style.opacity = '.10';
                 return square.style.backgroundColor;
             }
+
+            //apply additional opacity at 10% intervals
+            if((square.style.backgroundColor !== "") && (square.style.opacity <= "0.99")) {
+                square.style.opacity = parseFloat(square.style.opacity) + .10;
+                return square.style.backgroundColor;
+            }
         })
     }
 
